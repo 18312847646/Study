@@ -7,6 +7,17 @@
 * 学习群：[King、技术交流群](http://shang.qq.com/wpa/qunwpa?idkey=a1488cba8fc51aaa456a82105afafa34276957bd41337abcd0e593a098d9c56a "点击加群")<br>
 
 ####提交记录：<br>
->2015.8.1 星期六 14:7<br>
->Initial commit
+>2015.8.1 星期六 14:07<br>
+>Initial commit<br>
 
+<br>
+>2015.8.1 星期六 15:02<br>
+>Create README.md<br>
+
+<br>
+>2015.8.1 星期六 16:10<br>
+>添加Annotation框架<br>
+
+<br>
+>2015.8.1 星期六 17:22<br>
+>添加ToolBar<br>
