@@ -23,7 +23,7 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-@EActivity(R.layout.drawerlayout)
+@EActivity(R.layout.main)
 public class InitializeView extends AppCompatActivity
 {
 	// 初始化toolbar

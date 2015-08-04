@@ -16,10 +16,18 @@ public class MainActivity extends InitializeView
 		initializeview();
 	}
 
-	@Click(R.id.asynctask)
+	@Click({R.id.asynctask , R.id.listview})
 	public void button(View view)
 	{
-		startActivity(new Intent(this, midsummer.study.asynctask.MainActivity_.class));
+		switch(view.getId())
+		{
+			case R.id.asynctask:
+				startActivity(new Intent(this, midsummer.study.asynctask.MainActivity_.class));
+				break;
+			case R.id.listview:
+				startActivity(new Intent(this, midsummer.study.listview.MainActivity_.class));
+				break;
+		}
 	}
 
 

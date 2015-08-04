@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="midsummer.study"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+	package="midsummer.study"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<uses-permission android:name="android.permission.INTERNET" />
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
 		android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity_"
+		<activity
+			android:name=".MainActivity_"
 			android:label="@string/app_name">
-            <intent-filter>
+			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+			</intent-filter>
+		</activity>
+		<activity android:name=".InitializeView_" />
+
+		<activity android:name=".listview.MainActivity_" />
+
 		<activity android:name=".asynctask.MainActivity_" />
 		<activity android:name=".asynctask.ImageTest_" />
 		<activity android:name=".asynctask.ProgressBarTest_" />
-
 	</application>
 
 </manifest>
