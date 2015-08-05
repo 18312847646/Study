@@ -12,4 +12,5 @@
 	<string name="listview">ListView</string>
 	<string name="picker">Picker</string>
 	<string name="gridView">GridView</string>
+	<string name="spinner">Spinner</string>
 </resources>

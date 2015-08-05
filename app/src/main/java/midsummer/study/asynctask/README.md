@@ -11,6 +11,7 @@
 #####构建AsyncTask子类的参数
 * AsyncTask<Params,Progress,Result>是一个抽象类，通常用于被继承
 * 继承AsyncTask需要指定如下三个泛型参数
+
 >Params：启动任务时输入参数的类型<br>
 >Progress：后台任务执行中返回进度值的类型<br>
 >Result：后台执行任务完成后返回结果的类型<br>

@@ -9,9 +9,14 @@
 ####GridView学习笔记：
 
 #####GridView关键属性
-* android:numColumns<br>
->每一行显示多少列<br>
-* android:horizontalSpacing<br>
->两列之间的间距<br>
-* android:verticalSpacing<br>
->两行之间的行距<br>
+* android:numColumns
+
+>每一行显示多少列
+
+* android:horizontalSpacing
+
+>两列之间的间距
+
+* android:verticalSpacing
+
+>两行之间的行距
