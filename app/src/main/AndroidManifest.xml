@@ -24,6 +24,8 @@
 
 		<activity android:name=".picker.MainActivity_"/>
 
+		<activity android:name=".gridview.MainActivity_"/>
+
 		<activity android:name=".asynctask.MainActivity_" />
 		<activity android:name=".asynctask.ImageTest_" />
 		<activity android:name=".asynctask.ProgressBarTest_" />

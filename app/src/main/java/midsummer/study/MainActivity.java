@@ -16,7 +16,7 @@ public class MainActivity extends InitializeView
         initializeview();
     }
 
-    @Click({R.id.listview, R.id.picker, R.id.asynctask})
+    @Click({R.id.listview, R.id.picker, R.id.asynctask,R.id.gridView})
     public void button(View view)
     {
         switch (view.getId())
@@ -30,6 +30,9 @@ public class MainActivity extends InitializeView
                 break;
             case R.id.asynctask:
                 startActivity(new Intent(this, midsummer.study.asynctask.MainActivity_.class));
+                break;
+            case R.id.gridView:
+                startActivity(new Intent(this, midsummer.study.gridview.MainActivity_.class));
                 break;
         }
     }

@@ -12,7 +12,7 @@
 * ArrayAdapter（数组适配器）
 >用于绑定格式单一的数据<br>
 >数据源：可以是集合或者数组<br>
- * SimpleAdapter（简单适配器）
+* SimpleAdapter（简单适配器）
 >用于绑定格式复杂的数据<br>
 >数据源：只能是特定泛型的集合<br>
 
@@ -21,7 +21,7 @@
 * 实现过程：新建适配器->添加数据源到适配器->视图加载适配器
 
 #####监听器
- * OnItemClickListener
+* OnItemClickListener
 >可以处理视图中单个条目的点击事件
- * OnScrollListener
+* OnScrollListener
 >监测滚动的变化，可以用于视图在滚动中加载数据
