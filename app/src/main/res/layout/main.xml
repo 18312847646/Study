@@ -26,6 +26,15 @@
 				android:layout_gravity="center"
 				android:text="@string/listview"
 				/>
+
+			<Button
+				android:id="@+id/picker"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/picker"
+				/>
+
 			<Button
 				android:id="@+id/asynctask"
 				android:layout_width="match_parent"

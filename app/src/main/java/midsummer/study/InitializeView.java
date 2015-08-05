@@ -49,7 +49,7 @@ public class InitializeView extends AppCompatActivity
 	{
 		int result = 0;
 		int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-		if(resourceId > 0)
+		if (resourceId > 0)
 		{
 			result = context.getResources().getDimensionPixelSize(resourceId);
 		}
@@ -85,7 +85,7 @@ public class InitializeView extends AppCompatActivity
 	{
 		int id = item.getItemId();
 
-		if(id == R.id.action_settings)
+		if (id == R.id.action_settings)
 		{
 			return true;
 		}
@@ -141,7 +141,7 @@ public class InitializeView extends AppCompatActivity
 			PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
 			String version = info.versionName;
 			return this.getString(R.string.version) + version;
-		} catch(Exception e)
+		} catch (Exception e)
 		{
 			e.printStackTrace();
 			return this.getString(R.string.version);
@@ -150,7 +150,7 @@ public class InitializeView extends AppCompatActivity
 
 	protected void setImmerseLayout(View view)
 	{
-		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
 		{
 			Window window = getWindow();
 			window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
