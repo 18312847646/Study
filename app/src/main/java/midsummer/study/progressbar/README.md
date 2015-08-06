@@ -13,6 +13,7 @@
 * android:progress　第一显示进度
 * android:secondaryProgress　第二显示进度
 * android:indeterminate　设置是否精确显示
+
 >true表示不精确显示进度，false表示精确显示进度
 
 #####ProgressBar关键方法

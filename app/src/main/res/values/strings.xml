@@ -20,4 +20,5 @@
 
 	<string name="asynctask_internet_pictures">加载网络图片</string>
 	<string name="asynctask_schedule_spdate">进度更新</string>
+	<string name="webView">WebView</string>
 </resources>

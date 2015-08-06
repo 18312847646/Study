@@ -112,27 +112,4 @@ public class MainActivity extends InitializeView
 		}
 		text.setText("第一进度：" + (int) (progressBar.getProgress() / (float) progressBar.getMax() * 100) + "% 第二进度：" + (int) (progressBar.getSecondaryProgress() / (float) progressBar.getMax() * 100) + "%");
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

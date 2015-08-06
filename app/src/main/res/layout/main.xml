@@ -23,7 +23,6 @@
 				android:id="@+id/listview"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/listview"
 				/>
 
@@ -31,7 +30,6 @@
 				android:id="@+id/picker"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/picker"
 				/>
 
@@ -39,7 +37,6 @@
 				android:id="@+id/gridView"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/gridView"
 				/>
 
@@ -47,7 +44,6 @@
 				android:id="@+id/spinner"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/spinner"
 				/>
 
@@ -55,15 +51,20 @@
 				android:id="@+id/progressBar"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/progressBar"
+				/>
+
+			<Button
+				android:id="@+id/webView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/webView"
 				/>
 
 			<Button
 				android:id="@+id/asynctask"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
 				android:text="@string/AsyncTask"
 				/>
 
