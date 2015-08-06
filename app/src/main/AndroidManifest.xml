@@ -28,6 +28,8 @@
 
 		<activity android:name=".spinner.MainActivity_"/>
 
+		<activity android:name=".progressbar.MainActivity_"/>
+
 		<activity android:name=".asynctask.MainActivity_"/>
 		<activity android:name=".asynctask.ImageTest_"/>
 		<activity android:name=".asynctask.ProgressBarTest_"/>

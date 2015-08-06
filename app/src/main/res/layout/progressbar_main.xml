@@ -20,53 +20,44 @@
 			android:orientation="vertical">
 
 			<Button
-				android:id="@+id/listview"
-				android:layout_width="match_parent"
+				android:id="@+id/show"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/listview"
-				/>
+				android:layout_gravity="center_horizontal"
+				android:text="@string/progressBar_show"/>
 
-			<Button
-				android:id="@+id/picker"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/picker"
-				/>
-
-			<Button
-				android:id="@+id/gridView"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/gridView"
-				/>
-
-			<Button
-				android:id="@+id/spinner"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/spinner"
-				/>
-
-			<Button
+			<ProgressBar
 				android:id="@+id/progressBar"
+				style="@android:style/Widget.ProgressBar.Horizontal"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/progressBar"
-				/>
+				android:max="100"
+				android:progress="50"
+				android:progressDrawable="@drawable/progress_bar"
+				android:secondaryProgress="80"/>
 
 			<Button
-				android:id="@+id/asynctask"
-				android:layout_width="match_parent"
+				android:id="@+id/add"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:text="@string/AsyncTask"
-				/>
+				android:text="@string/progressBar_add"/>
 
+			<Button
+				android:id="@+id/reduce"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/progressBar_reduce"/>
+
+			<Button
+				android:id="@+id/reset"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/progressBar_reset"/>
+
+			<TextView
+				android:id="@+id/text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
 		</LinearLayout>
 		<!--    侧边栏    -->
 		<include layout="@layout/drawerlayout"/>
