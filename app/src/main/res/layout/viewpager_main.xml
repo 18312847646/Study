@@ -13,28 +13,25 @@
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:gravity="center"
-			android:orientation="vertical">
+			android:gravity="center">
 
-			<Button
-				android:id="@+id/asynctask_internet_pictures"
-				android:layout_width="match_parent"
+			<android.support.v4.view.ViewPager
+				android:id="@+id/pager"
+				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="@string/asynctask_internet_pictures"
-				/>
+				android:layout_gravity="center">
 
-			<Button
-				android:id="@+id/asynctask_schedule_spdate"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="@string/asynctask_schedule_spdate"
-				/>
+				<android.support.v4.view.PagerTabStrip
+					android:id="@+id/tab"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="top" />
+			</android.support.v4.view.ViewPager>
 
 		</LinearLayout>
 		<!--    侧边栏    -->
 		<include layout="@layout/drawerlayout" />
 
 	</android.support.v4.widget.DrawerLayout>
-
 </LinearLayout>
 
