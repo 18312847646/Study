@@ -16,7 +16,7 @@ public class MainActivity extends InitializeView
 		initializeview();
 	}
 
-	@Click({R.id.listview, R.id.picker, R.id.asynctask, R.id.gridView, R.id.spinner, R.id.progressBar, R.id.webView})
+	@Click({R.id.listview, R.id.picker, R.id.asynctask, R.id.gridView, R.id.spinner, R.id.progressBar, R.id.webView, R.id.viewpager, R.id.flipper})
 	public void button(View view)
 	{
 		switch (view.getId())
@@ -42,6 +42,12 @@ public class MainActivity extends InitializeView
 				break;
 			case R.id.webView:
 				startActivity(new Intent(this, midsummer.study.webview.MainActivity_.class));
+				break;
+			case R.id.viewpager:
+				startActivity(new Intent(this, midsummer.study.viewpager.MainActivity_.class));
+				break;
+			case R.id.flipper:
+				startActivity(new Intent(this, midsummer.study.viewflipper.MainActivity_.class));
 				break;
 		}
 	}

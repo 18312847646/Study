@@ -22,4 +22,5 @@
 	<string name="asynctask_schedule_spdate">进度更新</string>
 	<string name="webView">WebView</string>
 	<string name="viewpager">ViewPager</string>
+	<string name="flipper">ViewFlipper</string>
 </resources>

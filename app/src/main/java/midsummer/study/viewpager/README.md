@@ -10,6 +10,7 @@
 
 #####加载显示的页卡
 * 将layout布局转换成view对象<br>
+
 >(1)LayoutInflater lf = getLayoutInflater().from(this);<br>
 >(2)View.inflate(content,resource,root);<br>
 
