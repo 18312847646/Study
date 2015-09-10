@@ -4,7 +4,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -23,12 +22,12 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 {
 	@ViewById
 	GridView gridView;
-
+	
 	private List<Map<String, Object>> dataList;
 	private int[] icon = {R.drawable.address_book, R.drawable.calendar, R.drawable.camera, R.drawable.clock, R.drawable.games_control, R.drawable.messenger, R.drawable.ringtone, R.drawable.settings, R.drawable.speech_balloon, R.drawable.weather, R.drawable.world, R.drawable.youtube};
 	private String[] iconName = {"通讯录", "日历", "照相机", "时钟", "游戏", "短信", "铃声", "设置", "语音", "天气", "浏览器", "视频"};
 	private SimpleAdapter adapter;
-
+	
 	@AfterViews
 	public void MainActivity()
 	{
@@ -42,7 +41,7 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 		gridView.setAdapter(adapter);
 		gridView.setOnItemClickListener(this);
 	}
-
+	
 	private List<Map<String, Object>> getData()
 	{
 		for (int i = 0; i < icon.length; i++)
@@ -54,10 +53,10 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 		}
 		return dataList;
 	}
-
+	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id)
 	{
-		Toast.makeText(this, "我是" + iconName[position], Toast.LENGTH_SHORT).show();
+		ShowToast("我是" + iconName[position]);
 	}
 }

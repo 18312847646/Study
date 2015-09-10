@@ -5,7 +5,6 @@ import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -28,14 +27,14 @@ public class MainActivity extends InitializeView implements ViewPager.OnPageChan
 	PagerTabStrip tab;
 	private List<View> viewList;
 	private List<String> titliList;
-
+	
 	private List<Fragment> fragmentList;
-
+	
 	@AfterViews
 	public void MainActivity()
 	{
 		initializeview();
-
+		
 		viewList = new ArrayList<View>();
 		/**
 		 * 通过View对象去作为ViewPager的数据源
@@ -47,7 +46,7 @@ public class MainActivity extends InitializeView implements ViewPager.OnPageChan
 		View view5 = View.inflate(this, R.layout.progressbar_main, null);
 		View view6 = View.inflate(this, R.layout.spinner_main, null);
 		View view7 = View.inflate(this, R.layout.webview_main, null);
-
+		
 		viewList.add(view1);
 		viewList.add(view2);
 		viewList.add(view3);
@@ -55,7 +54,7 @@ public class MainActivity extends InitializeView implements ViewPager.OnPageChan
 		viewList.add(view5);
 		viewList.add(view6);
 		viewList.add(view7);
-
+		
 		/**
 		 * 通过Fragment作为ViewPager的数据源
 		 */
@@ -64,7 +63,7 @@ public class MainActivity extends InitializeView implements ViewPager.OnPageChan
 		fragmentList.add(new MyFragment1());
 		fragmentList.add(new MyFragment2());
 		fragmentList.add(new MyFragment3());
-
+		
 		// 位ViewPager页卡设置标题
 		titliList = new ArrayList<String>();
 		titliList.add(getString(R.string.AsyncTask));
@@ -74,35 +73,35 @@ public class MainActivity extends InitializeView implements ViewPager.OnPageChan
 		titliList.add(getString(R.string.progressBar));
 		titliList.add(getString(R.string.spinner));
 		titliList.add(getString(R.string.webView));
-
+		
 		// 为PagerTabStrip设置一些属性
 		tab.setDrawFullUnderline(false);
-
+		
 		// 创建PagerAdapter的适配器
 		MyPagerAdapter adapter = new MyPagerAdapter(viewList, titliList);
 		// ViewPager加载适配器
 		//pager.setAdapter(adapter);
-
+		
 		MyFragmentPagerAdapter adapter1 = new MyFragmentPagerAdapter(getSupportFragmentManager(), fragmentList, titliList);
 		//pager.setAdapter(adapter1);
-
+		
 		MyFragmentPagerAdapter1 adapter2 = new MyFragmentPagerAdapter1(getSupportFragmentManager(), fragmentList, titliList);
 		pager.setAdapter(adapter2);
 		pager.setOnPageChangeListener(this);
 	}
-
+	
 	@Override
 	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
 	{
-
+		
 	}
-
+	
 	@Override
 	public void onPageSelected(int position)
 	{
-		Toast.makeText(this, "当前第" + position + "页", Toast.LENGTH_SHORT).show();
+		ShowToast("当前第" + position + "页");
 	}
-
+	
 	@Override
 	public void onPageScrollStateChanged(int state)
 	{

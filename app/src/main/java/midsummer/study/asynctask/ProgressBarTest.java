@@ -14,10 +14,11 @@ import midsummer.study.R;
 @EActivity(R.layout.asynctask_progressbar)
 public class ProgressBarTest extends InitializeView
 {
-	@ViewById(R.id.pg)
-	ProgressBar mProgressBar;
+	@ViewById
+	ProgressBar progressBar;
+	
 	private MyAsyncTask mTask;
-
+	
 	@AfterViews
 	protected void ProgressBarTest()
 	{
@@ -26,13 +27,13 @@ public class ProgressBarTest extends InitializeView
 		// 启动异步任务
 		mTask.execute();
 	}
-
+	
 	@Override
 	protected void onPause()
 	{
 		super.onPause();
 		//不为空且running
-		if(mTask != null || mTask.getStatus() == AsyncTask.Status.RUNNING)
+		if (mTask != null || mTask.getStatus() == AsyncTask.Status.RUNNING)
 		{
 			//cancel只是将对应的AsyncTask标记为cancel，并不是真正的取消线程的执行
 			mTask.cancel(true);
@@ -53,9 +54,9 @@ public class ProgressBarTest extends InitializeView
 		protected Void doInBackground(Void... params)
 		{
 			//模拟进度更新
-			for(int i = 0; i < 100; i++)
+			for (int i = 0; i < 100; i++)
 			{
-				if(isCancelled())
+				if (isCancelled())
 				{
 					break;
 				}
@@ -63,24 +64,24 @@ public class ProgressBarTest extends InitializeView
 				try
 				{
 					Thread.sleep(20);
-				} catch(InterruptedException e)
+				} catch (InterruptedException e)
 				{
 					e.printStackTrace();
 				}
 			}
 			return null;
 		}
-
+		
 		@Override
 		protected void onProgressUpdate(Integer... values)
 		{
 			//获取进度条更新值
 			super.onProgressUpdate(values);
-			if(isCancelled())
+			if (isCancelled())
 			{
 				return;
 			}
-			mProgressBar.setProgress(values[0]);
+			progressBar.setProgress(values[0]);
 		}
 	}
 }

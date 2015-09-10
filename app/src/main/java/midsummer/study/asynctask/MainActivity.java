@@ -20,12 +20,11 @@ public class MainActivity extends InitializeView
 		MyAsyncTask task = new MyAsyncTask();
 		task.execute();
 	}
-
-
-	@Click({R.id.asynctask_internet_pictures , R.id.asynctask_schedule_spdate})
+	
+	@Click({R.id.asynctask_internet_pictures, R.id.asynctask_schedule_spdate})
 	public void button(View view)
 	{
-		switch(view.getId())
+		switch (view.getId())
 		{
 			case R.id.asynctask_internet_pictures:
 				startActivity(new Intent(this, ImageTest_.class));

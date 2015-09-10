@@ -23,7 +23,7 @@ import midsummer.study.R;
 
 /**
  * 执行顺序：
- * <p>
+ * <p/>
  * new MyAsyncTask().execute(URL):传递一个或多个参数进去
  * onPreExecute(): 初始化操作
  * doInBackground(String... params): 开始真正的异步处理，最后返回指定类型
@@ -39,18 +39,18 @@ import midsummer.study.R;
 public class ImageTest extends AppCompatActivity
 {
 	private static String URL = "http://www.vivalaplay.com/wp-content/uploads/2014/08/acu_arno_elise_artwork_kybx2.jpg";
-	@ViewById(R.id.image)
-	ImageView mImageView;
-	@ViewById(R.id.progressbar)
-	ProgressBar mProgressBar;
-
+	@ViewById
+	ImageView image;
+	@ViewById
+	ProgressBar progressbar;
+	
 	@AfterViews
 	protected void ImageTest()
 	{
 		//设置传递进入的参数
 		new MyAsyncTask().execute(URL);
 	}
-
+	
 	/**
 	 * <URL类型，进度值类型，返回值类型>
 	 */
@@ -61,9 +61,9 @@ public class ImageTest extends AppCompatActivity
 		{
 			super.onPreExecute();
 			//显示ProgressBar
-			mProgressBar.setVisibility(View.VISIBLE);
+			progressbar.setVisibility(View.VISIBLE);
 		}
-
+		
 		/**
 		 * 操作UI
 		 * 设置图像
@@ -73,10 +73,10 @@ public class ImageTest extends AppCompatActivity
 		{
 			super.onPostExecute(bitmap);
 			// 隐藏ProgressBar
-			mProgressBar.setVisibility(View.GONE);
-			mImageView.setImageBitmap(bitmap);
+			progressbar.setVisibility(View.GONE);
+			image.setImageBitmap(bitmap);
 		}
-
+		
 		/**
 		 * String... params可变长数组
 		 * 可传递不止一个参数
@@ -107,10 +107,10 @@ public class ImageTest extends AppCompatActivity
 				//关闭输入流
 				is.close();
 				bis.close();
-			} catch(MalformedURLException e)
+			} catch (MalformedURLException e)
 			{
 				e.printStackTrace();
-			} catch(IOException e)
+			} catch (IOException e)
 			{
 				e.printStackTrace();
 			}

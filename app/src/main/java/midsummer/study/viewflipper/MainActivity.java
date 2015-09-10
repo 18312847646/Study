@@ -17,9 +17,9 @@ public class MainActivity extends InitializeView
 	@ViewById
 	ViewFlipper flipper;
 	private float startX;
-
+	
 	private int[] resId = {R.drawable.address_book, R.drawable.calendar, R.drawable.camera, R.drawable.clock, R.drawable.games_control,};
-
+	
 	@AfterViews
 	public void MainActivity()
 	{
@@ -29,7 +29,7 @@ public class MainActivity extends InitializeView
 		{
 			flipper.addView(getImageView(resId[i]));
 		}
-
+		
 		// 为ViewFlipper添加动画效果
 /*		flipper.setInAnimation(this,R.anim.abc_fade_in);
 		flipper.setOutAnimation(this,R.anim.abc_fade_out);
@@ -38,7 +38,15 @@ public class MainActivity extends InitializeView
 		// 开始播放
 		flipper.startFlipping();*/
 	}
-
+	
+	private ImageView getImageView(int resId)
+	{
+		ImageView image = new ImageView(this);
+		//image.setImageResource(resId);
+		image.setBackgroundResource(resId);
+		return image;
+	}
+	
 	@Override
 	public boolean onTouchEvent(MotionEvent event)
 	{
@@ -72,13 +80,5 @@ public class MainActivity extends InitializeView
 				break;
 		}
 		return super.onTouchEvent(event);
-	}
-
-	private ImageView getImageView(int resId)
-	{
-		ImageView image = new ImageView(this);
-		//image.setImageResource(resId);
-		image.setBackgroundResource(resId);
-		return image;
 	}
 }

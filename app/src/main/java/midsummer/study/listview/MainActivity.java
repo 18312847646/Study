@@ -7,7 +7,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -29,12 +28,12 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 	private ArrayAdapter<String> array_adapter;
 	private SimpleAdapter simple_adapter;
 	private List<Map<String, Object>> dataList;
-
+	
 	@AfterViews
 	public void MainActivity()
 	{
 		initializeview();
-
+		
 		// 1. 新建一个数据适配器
 		// ArrayAdapter(上下文，当前ListView加载的每一个列表所对应的布局文件,数据源)
 		// SimpleAdapter（Context context, List<? extends Map<String, ?>> data,int resource, String[] from, int[] to）
@@ -48,20 +47,20 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 		 * to：绑定数据视图中的ID，与from成对应关系
 		 */
 		// 2. 适配器加载数据源
-		String[] array_data = {"aaa" , "bbb" , "ccc" , "ddd"};
+		String[] array_data = {"aaa", "bbb", "ccc", "ddd"};
 		dataList = new ArrayList<Map<String, Object>>();
 		array_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array_data);
-		simple_adapter = new SimpleAdapter(this, getData(), R.layout.listview_item, new String[]{"image" , "text"}, new int[]{R.id.image , R.id.text});
+		simple_adapter = new SimpleAdapter(this, getData(), R.layout.listview_item, new String[]{"image", "text"}, new int[]{R.id.image, R.id.text});
 		// 3. 视图加载适配器
 		// 两种适配器
 		// listview.setAdapter(array_adapter);
 		listview.setAdapter(simple_adapter);
-
+		
 		// 点击事件
 		listview.setOnItemClickListener(this);
 		listview.setOnScrollListener(this);
 	}
-
+	
 	/**
 	 * 数据源
 	 *
@@ -69,7 +68,7 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 	 */
 	private List<Map<String, Object>> getData()
 	{
-		for(int i = 0; i < 30; i++)
+		for (int i = 0; i < 30; i++)
 		{
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("image", R.mipmap.ic_launcher);
@@ -78,7 +77,7 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 		}
 		return dataList;
 	}
-
+	
 	/**
 	 * Item单击事件
 	 *
@@ -91,9 +90,9 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id)
 	{
 		String text = listview.getItemAtPosition(position) + "";
-		Toast.makeText(this, "position=" + position + "text=" + text, Toast.LENGTH_SHORT).show();
+		ShowToast("position=" + position + "text=" + text);
 	}
-
+	
 	/**
 	 * Item滑动事件
 	 *
@@ -103,7 +102,7 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 	@Override
 	public void onScrollStateChanged(AbsListView view, int scrollState)
 	{
-		switch(scrollState)
+		switch (scrollState)
 		{
 			case SCROLL_STATE_FLING:
 				Log.i("77.", "手指离开屏幕前用力划了一下，视图仍依靠惯性继续滑动");
@@ -122,10 +121,10 @@ public class MainActivity extends InitializeView implements AdapterView.OnItemCl
 				break;
 		}
 	}
-
+	
 	@Override
 	public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
 	{
-
+		
 	}
 }

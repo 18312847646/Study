@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -24,21 +23,15 @@ public class MainActivity extends InitializeView
 	@ViewById
 	ProgressBar progressBar;
 	@ViewById
-	Button add;
-	@ViewById
-	Button reduce;
-	@ViewById
-	Button reset;
-	@ViewById
-	Button show;
-
+	Button add, reduce, reset, show;
+	
 	private ProgressDialog progressDialog;
-
+	
 	@AfterViews
 	public void MainActivity()
 	{
 		initializeview();
-
+		
 		// 获取第一进度
 		int first = progressBar.getProgress();
 		// 获取第二进度
@@ -47,7 +40,7 @@ public class MainActivity extends InitializeView
 		int max = progressBar.getMax();
 		text.setText("第一进度：" + (int) (first / (float) max * 100) + "% 第二进度：" + (int) (second / (float) max * 100) + "%");
 	}
-
+	
 	@Click({R.id.add, R.id.reduce, R.id.reset, R.id.show})
 	public void click(View view)
 	{
@@ -82,7 +75,7 @@ public class MainActivity extends InitializeView
 				progressDialog.setMessage("正在下载");
 				// 设置图标
 				progressDialog.setIcon(R.mipmap.ic_launcher);
-
+				
 				/**
 				 * 设置ProgressBar的属性
 				 */
@@ -92,7 +85,7 @@ public class MainActivity extends InitializeView
 				progressDialog.incrementProgressBy(50);
 				// 进度条是明确显示进度
 				progressDialog.setIndeterminate(false);
-
+				
 				/**
 				 * 设置一个确定按钮
 				 */
@@ -101,7 +94,7 @@ public class MainActivity extends InitializeView
 					@Override
 					public void onClick(DialogInterface dialog, int which)
 					{
-						Toast.makeText(MainActivity.this, "正在下载", Toast.LENGTH_SHORT).show();
+						ShowToast("正在下载");
 					}
 				});
 				// 是否可以通过返回按钮退出对话框
